@@ -7,7 +7,7 @@ services:
       context: https://github.com/eeditiones/tei-guidelines.git#master
       dockerfile: Dockerfile
     # comment in to automatically restart:
-    # restart: always
+    restart: always
     volumes:
       # database files will be stored in a volume to avoid data loss
       # when the service is updated
@@ -35,7 +35,7 @@ services:
     depends_on:
       - publisher
     # comment in to automatically restart:
-    # restart: always
+    restart: always
   certbot:
     image: certbot/certbot:latest
     volumes:
